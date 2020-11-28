@@ -1,1 +1,98 @@
-placeholder
+<!DOCTYPE html>
+<html>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/bootstrap-table@1.18.0/dist/bootstrap-table.min.css"
+  />
+  <link rel="stylesheet" href="styles.css" type="text/css" />
+  <link
+    href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet"
+  />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/superagent/3.8.3/superagent.min.js"></script>
+  <script src="https://unpkg.com/bootstrap-table@1.18.0/dist/bootstrap-table.min.js"></script>
+  <script src="https://unpkg.com/bootstrap-table@1.18.0/dist/extensions/export/bootstrap-table-export.min.js"></script>
+  <script src="https://res.cloudinary.com/dxfq3iotg/raw/upload/v1569818907/jquery.table2excel.min.js"></script>
+  <script src="https://unpkg.com/bootstrap-table@1.18.0/dist/extensions/export/bootstrap-table-export.min.js"></script>
+
+  <body>
+    <div class="wrapper">
+      <div class="sidebar">
+        <div class="sidebar-wrapper">
+          <div class="user">
+            <div class="photo">
+              <img src="./garfield.jpg" />
+            </div>
+            <div class="info">
+              <a><span>Darla Garfield (Admin)</span></a>
+            </div>
+          </div>
+
+          <ul class="nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#" onclick="defaultModule()"
+                ><i class="material-icons nc-icon"> home</i>
+                <p>Home</p></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" onclick="loadFile()"
+                ><i class="material-icons nc-icon"> unarchive</i>
+                <p>Upload Files</p></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" onclick="loadMamasGarfields()"
+                ><i class="material-icons nc-icon"> insights</i>
+                <p>Optimize Run</p></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" onclick="viewPrior()"
+                ><i class="material-icons nc-icon"> history</i>
+                <p>View Prior Runs</p></a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="main-panel">
+        <div id="target"></div>
+        <footer class="footer">
+          <div class="container">
+            <nav>
+              <ul class="footer-menu">
+                <li>
+                  <a href="#" onclick="loadFile()">Upload</a>
+                </li>
+                <li>
+                  <a href="#" onclick="loadMamasGarfields()">Optimize</a>
+                </li>
+                <li>
+                  <a href="#" onclick="viewPrior()">History</a>
+                </li>
+              </ul>
+              <p class="copyright text-center">
+                <a href="https://www.lasagnalove.org/">Lasagna Love</a>
+              </p>
+            </nav>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </body>
+
+  <script src="api/api.js"></script>
+  <script src="modules/modules.js"></script>
+</html>
